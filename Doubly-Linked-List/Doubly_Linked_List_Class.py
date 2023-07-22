@@ -147,4 +147,27 @@ class DoubleLinkedList:
         
         self.length -= 1
         return temp
+
+    def reverse(self):
+        if self.length == 0:
+            return None
+        h = self.head
+        t = self.tail 
+        self.head = t
+        self.tail = h
+        
+        before = None
+        temp = h
+        after = temp.next
+        
+        while temp:
+            temp.next = before
+            temp.prev = after
+            
+            before = temp
+            temp = after
+            if after == None:
+                break
+            after = after.next
+        return True
             
