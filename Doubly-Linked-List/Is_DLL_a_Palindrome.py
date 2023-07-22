@@ -42,6 +42,28 @@ class DoublyLinkedList:
         else:
             return False
 
+
+#alternative method to check for palindromes, this is better in terms of time complexity since we are not adding elements to a list and reversing consequently
+# =============================================================================
+#     def is_palindrome(self):
+#         if self.length == 0:
+#            return True
+#         temp_h = self.head
+#         temp_t = self.tail
+#         if self.length %2 == 0:
+#             half_length = self.length/2
+#         elif self.length %2 != 0:
+#             half_length = int(round(self.length/2,0)) + 1
+#         
+#         for _ in range(half_length):
+#             if temp_t.value != temp_h.value:
+#                 return False
+#             else:
+#                 return True
+#             temp_h = temp_h.next
+#             temp_t = temp_t.prev
+# =============================================================================
+
 #Test cases
 my_dll_1 = DoublyLinkedList(1)
 my_dll_1.append(2)
@@ -57,7 +79,10 @@ my_dll_2 = DoublyLinkedList(1)
 my_dll_2.append(2)
 my_dll_2.append(3)
 
-print('\nDLL2 is a palindrome:')
+print('\nDLL2 is a palindrome')
 print( my_dll_2.is_palindrome() )
 
+my_dll_3 = DoublyLinkedList(1)
+print('\nDLL3 is a palindrome')
+print( my_dll_3.is_palindrome())
 
