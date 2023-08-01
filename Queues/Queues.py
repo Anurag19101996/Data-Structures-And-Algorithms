@@ -1,3 +1,4 @@
+#We use a linked list-type structure to mimic the Queue structure. We add the new element to the end and if we need to remove any element from the Queue, we do from the beginning. This is to done to maintain O(1) time complexity.
 class Node:
     def __init__(self, value):
         self.value = value
